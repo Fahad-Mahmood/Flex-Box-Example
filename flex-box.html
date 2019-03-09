@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Khoja</title>
+    <style>
+       .header {
+           display: flex;
+           flex-direction: row;
+       }
+       .header-img {
+           width: 20%;
+       }
+       .header-text {
+           width: 80%;
+           text-align: center;
+       }
+       .nav {
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+       }
+       .container {
+           display: flex;
+           flex-direction: row;
+       }
+       .column1 {
+           width: 80%;
+           background-color:lemonchiffon;
+       }
+       .column2 {
+           width:20%;
+           background-color:burlywood;
+       }
+       .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdown-content {display: block;}
+    </style>
+  </head>
+  <body>
+      <header>
+          <div class="header">
+            <figure class="header-image">
+                <img alt="logo">
+            </figure>
+            <p class="header-text">
+              Comsats University
+            </p>
+          </div> 
+      </header>
+      <main>
+          <nav class="nav">
+            <p>Home</p>
+            <div class="dropdown">
+                    <button class="dropbtn">Departments</button>
+                    <div class="dropdown-content">
+                      <a href="#">CS</a>
+                      <a href="#">Business</a>
+                      <a href="#">Architecture</a>
+                    </div>
+                  </div>
+            <p>Staff</p>
+            <div class="dropdown">
+                    <button class="dropbtn">Campuses</button>
+                    <div class="dropdown-content">
+                      <a href="#">Islamabad</a>
+                      <a href="#">Tarlai</a>
+                      <a href="#">Taramri</a>
+                    </div>
+                  </div>
+
+          </nav>
+          <div class="container">
+              <div class="column1">
+                <h1>Main Content Here add images and text below</h1>
+                <img  height="500" width="700" src="i1.jpg">
+              </div>
+              <div class="column2">
+                     <div>
+                         Div 1
+                     </div>
+                     <div>
+                         Div 2
+                     </div>
+              </div>
+          </div>
+          <footer> 
+              <p style="text-align:center;color:white;background-color:black">Copyrights &copy; 2019</p>
+          </footer>
+      </main>
+  </body>
+</html>
