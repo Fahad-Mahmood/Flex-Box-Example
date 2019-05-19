@@ -1,0 +1,40 @@
+<script>
+  window.onload = function() {
+    let imgArray = ['img1.png','img2.png','img3.png','img4.png','img5.png'];
+    let callingTime = setCallingTime(imgArray);
+    display(imgArray, callingTime, 0);
+}
+
+const setCallingTime = (myarr) => {
+      let times = [];
+      let userTime;
+      myarr.forEach((element)=> {
+        userTime = prompt(`Please enter calling time for: ${element}`);
+        times.push(parseInt(userTime));
+        console.log(times);
+    });
+    return times;
+}
+
+const display = (image, delay, index) =>
+  setTimeout(() => {
+    document.getElementById('pic').src = image[index];
+    console.log(delay[index]);
+    if(index >= image.length-1)
+    display(image,delay,0);
+    else {
+      display(image,delay,index+1);
+    }
+  }, delay[index]);
+
+</script>
+</head>
+<body>
+    <h1>Array of images</h1>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <img src="img1.png" width="400px" id="pic"> 
+            
+        </div>
